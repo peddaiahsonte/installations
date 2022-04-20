@@ -1,0 +1,11 @@
+- name: OpenJDK 11 - The Java 11 Development Kit
+  apt: 
+    name="{{java}}" 
+    state=present 
+    update_cache=yes
+- name: "to the java version"
+  shell:
+     cmd: java --version
+  register: java_version
+- name : "to see java version"
+  debug: var=java_version

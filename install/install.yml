@@ -1,0 +1,25 @@
+- hosts: localhost
+  become:
+    yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - role: java
+      tags: java
+    - role: maven
+      tags: maven
+    - role: kafka
+      tags: kafka
+    - role: Docker
+      tags: Docker
+    - role: nodejs
+      tags: nodejs
+    - role: mongodb
+      tags: mongodb
+    - role: mosquitto
+      tags: mosquitto
+    - role: activemq
+      tags: activemq
+    - role: postgresql
+      tags: postgresql
+
